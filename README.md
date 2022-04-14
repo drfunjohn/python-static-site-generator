@@ -27,6 +27,13 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
+
+### pyenv/pipenv
+```
+pyenv local 3.9.2
+pyenv install --skip-existing $(pyenv local)
+pipenv install --python=$(pyenv which python) # use requirements.txt  
+```
 *Note: If you've installed Python 3 using a method other than Homebrew, you might need to type `python` in the second command instead of `python3`.*
 
 ### About pip
