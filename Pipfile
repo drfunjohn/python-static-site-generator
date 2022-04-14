@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+docutils = "==0.16"
+parso = "==0.6.0"
+pytest = "==5.3.5"
+pytest-json-report = "==1.2.1"
+pytest-metadata = "==1.8.0"
+pytest-sugar = "==0.9.2"
+redbaron = "==0.9.2"
+typer = "==0.0.8"
+Markdown = "==3.1.1"
+PyYAML = "==5.3"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
