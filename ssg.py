@@ -4,6 +4,9 @@ import ssg.parsers
 
 
 def main(source="content", dest="dist"):
+    """
+    main
+    """
     config = {
             "source": source,
             "dest": dest,
