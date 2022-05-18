@@ -16,6 +16,7 @@ Markdown = "==3.1.1"
 PyYAML = "==5.3"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.9"
