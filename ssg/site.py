@@ -26,13 +26,18 @@ class Site:
         for path in self.source.rglob("*"):
             if path.is_dir():
                 self.create_dir(path)
+            elif path.is_file():
+                self.run_parser(path)
 
-    def load_parser(self, extention):
+
+
+
+    def load_parser(self, extension):
         """
         load parser
         """
         for parser in self.parsers:
-            if parser.valide_extention(extention):
+            if parser.valid_extension(extension):
                 return parser
 
     def run_parser(self, path):
