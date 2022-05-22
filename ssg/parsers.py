@@ -35,11 +35,11 @@ class Parser:
             file.write(content)
 
     def copy(self, path, source, dest ):
-        shutil.copy2(source, dest / path.relative_to(source) )
+        shutil.copy2(path, dest / path.relative_to(source) )
 
 class ResourceParser(Parser):
     extensions = [ ".jpg", ".png", ".gif", ".css", ".html"]
 
     def parse(self, path: Path, source: Path, dest: Path):
-        copy(path, source, dest)
+        self.copy(path, source, dest)
 
