@@ -27,8 +27,7 @@ class Parser:
         read content of file
         """
         with open(path, "r") as file:
-            file_content = file.read()
-        return file_content
+            return file.read()
 
     def write(self, path, dest, content, ext=".html"):
         full_path=Path( dest / path.with_suffix(ext).name )
