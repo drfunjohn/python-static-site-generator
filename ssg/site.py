@@ -26,3 +26,22 @@ class Site:
         for path in self.source.rglob("*"):
             if path.is_dir():
                 self.create_dir(path)
+
+    def load_parser(self, extention):
+        """
+        load parser
+        """
+        for parser in self.parsers:
+            if parser.valide_extention(extention):
+                return parser
+
+    def run_parser(self, path):
+        """
+        run parser
+        """
+        parser=self.load_parser(path.suffix)
+        if parser is not None:
+            parser.parse(path, self.source, self.dest)
+        else:
+            print("Not Implemented")
+        
